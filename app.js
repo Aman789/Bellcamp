@@ -43,7 +43,7 @@ app.get("/campgrounds", function(req, res){
 			console.log(err);
 		}
 		else {
-			res.render("index", {campgrounds: allcampgrounds});
+			res.render("campgrounds", {campgrounds: allcampgrounds});
 		}
 	});
 });
@@ -80,6 +80,10 @@ app.get("/campgrounds/:id", function(req, res){
 		}
 	});
 });
+
+app.get("/login", function(req, res){
+		res.render("login");
+	});
 
 app.listen(3001, function() {
 					 console.log("running server on 3001");
